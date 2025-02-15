@@ -398,3 +398,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+.DS_Store
+
+# Ignore JetBrains IDE project files
+.idea/
