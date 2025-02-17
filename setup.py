@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="progzee",
-    version="0.1.0",
+    version="0.1.1",
     description="A Python library for simplifying IP proxy usage in HTTP requests, with proxy rotation.",
     long_description = (this_directory / "README.md").read_text(),
     author="Aldin Kiselica",
