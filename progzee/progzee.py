@@ -1,6 +1,7 @@
 import requests
 import configparser
 from typing import List, Dict, Optional
+import os
 
 class Progzee:
     def __init__(
@@ -26,17 +27,17 @@ class Progzee:
         
         :param config_file: Path to the config file.
         """
-        try:
-            config = configparser.ConfigParser()
-            config.read(config_file)
-
-            if "progzee" in config and "proxies" in config["progzee"]:
-                # Split the proxies string into a list
-                self.proxies = [proxy.strip() for proxy in config["progzee"]["proxies"].split(",")]
-            else:
-                raise ValueError("Config file must contain a '[progzee]' section with a 'proxies' key.")
-        except FileNotFoundError:
+        if not os.path.exists(config_file):
             raise FileNotFoundError(f"Config file '{config_file}' not found.")
+
+        config = configparser.ConfigParser()
+        config.read(config_file)
+
+        if not config.has_section("progzee") or not config.has_option("progzee", "proxies"):
+            raise ValueError("Config file must contain a '[progzee]' section with a 'proxies' key.")
+
+        # Split the proxies string into a list
+        self.proxies = [proxy.strip() for proxy in config["progzee"]["proxies"].split(",")]
 
     def get_proxy_config(self) -> Optional[Dict[str, str]]:
         """
