@@ -74,3 +74,8 @@ The tool is provided as-is, without any warranty. The author is not responsible 
 Users are responsible for ensuring their usage complies with the Terms of Service of the APIs they interact with. Misuse of this tool, including but not limited to scraping without permission, bypassing rate limits, or engaging in malicious activities, is strictly prohibited.
 
 By using this tool, you agree to use it responsibly and in compliance with all applicable laws and regulations.
+
+## Thanks for the support!
+Support this project with the GitHub Star.
+
+Support the project author with a [pizza slice](buymeacoffee.com/kiselitza).
