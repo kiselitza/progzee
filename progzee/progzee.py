@@ -1,4 +1,5 @@
 import requests
+import configparser
 from typing import List, Dict, Optional
 
 class Progzee:
@@ -26,8 +27,14 @@ class Progzee:
         :param config_file: Path to the config file.
         """
         try:
-            with open(config_file, 'r') as file:
-                self.proxies = [line.strip() for line in file if line.strip()]
+            config = configparser.ConfigParser()
+            config.read(config_file)
+
+            if "progzee" in config and "proxies" in config["progzee"]:
+                # Split the proxies string into a list
+                self.proxies = [proxy.strip() for proxy in config["progzee"]["proxies"].split(",")]
+            else:
+                raise ValueError("Config file must contain a '[progzee]' section with a 'proxies' key.")
         except FileNotFoundError:
             raise FileNotFoundError(f"Config file '{config_file}' not found.")
 
