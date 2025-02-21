@@ -78,4 +78,4 @@ By using this tool, you agree to use it responsibly and in compliance with all a
 ## Thanks for the support!
 Support this project with the GitHub Star.
 
-Support the project author with a [pizza slice](buymeacoffee.com/kiselitza).
+Support the project author with a [pizza slice](https://buymeacoffee.com/kiselitza).
