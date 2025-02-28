@@ -3,7 +3,7 @@ Progzee is a Python library for simplifying IP proxy usage in HTTP requests, wit
 
 <div align="center">
 
-![PyPI - Downloads](https://img.shields.io/pypi/dm/progzee?style=for-the-badge&color=blue)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/progzee?style=for-the-badge&logo=pypi&logoColor=yellow&color=blue)
 [![GitHub Repo stars](https://img.shields.io/github/stars/kiselitza/progzee?style=for-the-badge&logo=github&logoColor=EFBF04&color=EFBF04)](https://star-history.com/#kiselitza/progzee)
 [![License](https://img.shields.io/github/license/kiselitza/progzee?style=for-the-badge&logo=gitbook&link=https%3A%2F%2Fgithub.com%kiselitza%2Fprogzee%2Fblob%2Fmain%2FLICENSE)](/LICENSE)
 </div>
